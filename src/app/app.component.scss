@@ -1,0 +1,62 @@
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, Times, serif;
+}
+
+.drop-zone {
+  width: 650px;
+  height: 180px;
+  border: 2px solid #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  & img {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+  }
+}
+
+.highlighted {
+  background: #d9dfa4;
+  border: 2px dashed #b5c051;
+  border-radius: 8px;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  cursor: move;
+  margin-right: 17px;
+
+  &-grid {
+    display: flex;
+    width: 650px;
+    height: 150px;
+  }
+}
+
+.drop-animation {
+  position: absolute;
+  width: 128px;
+  height: 122px;
+  transform: translate(-50%, -50%);
+  background-image: url(../../src/assets/images/epuff.png);
+  animation-name: puff;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(5);
+}
+
+@keyframes puff {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px -622px;
+  }
+}
